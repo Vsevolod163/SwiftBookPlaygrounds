@@ -25,7 +25,7 @@ setupAlarm(for: someDay)
 enum Weekday { // название единственное число
     case monday
     case tuesday
-    case wednseday
+    case wednesday
     case thursday
     case friday
     case saturday
@@ -40,7 +40,7 @@ func setupAlarm(for weekday: Weekday) {
     switch weekday {
     case .monday, .tuesday:
         print("Set alarm to 8 am")
-    case .wednseday:
+    case .wednesday:
         print("Set alarm to 8:30 am")
     case .thursday:
         print("Set alarm to 7:30 am")

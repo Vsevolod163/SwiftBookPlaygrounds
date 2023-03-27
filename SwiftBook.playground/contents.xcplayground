@@ -11,5 +11,6 @@
         <page name='Lesson 8 Inheritance'/>
         <page name='Lesson 9 Enumeration'/>
         <page name='Lesson 10 Tuples'/>
+        <page name='Lesson 11 Cast Types'/>
     </pages>
 </playground>

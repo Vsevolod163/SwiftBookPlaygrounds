@@ -117,6 +117,7 @@ let charactersSecond: Set<Character> = ["a", "b", "b"]
 
 var stringsTwo: Set = ["a", "a", "a", "b", "c"]
 
+print(stringsTwo.count)
 // Добавление нового элемента в множество
 
 stringsTwo.insert("e")
