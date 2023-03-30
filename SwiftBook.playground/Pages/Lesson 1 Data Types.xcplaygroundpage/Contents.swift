@@ -65,3 +65,18 @@ let user = "1"
 let castStringToInt = age + (Int(userName) ?? 0) // ?? - иначе
 print(castStringToInt)
 
+
+// Type aliaces
+
+typealias Centigrade = Int
+
+let temperature: Centigrade = 25
+let anotherTemp = 20
+
+let difference = temperature - anotherTemp
+
+typealias CompletionHandler = (Int, String) -> String
+
+func someFunc(closure: CompletionHandler) {
+    
+}
