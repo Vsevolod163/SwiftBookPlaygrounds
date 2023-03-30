@@ -92,5 +92,84 @@ tim.name
 tim.age = 62
 
 
+// Getter, Setter
+
+class SecondPerson {
+    var name: String
+    var surname: String
+    
+    var yearOfBirth: Int
+    var currentYear: Int
+
+    var age: Int {
+        currentYear - yearOfBirth
+    }
+    
+    var fullName: String {
+        get {
+            name + " " + surname
+        }
+        set {
+            let nameAndSurname = newValue.split(separator: " ")
+            name = String(nameAndSurname.first ?? "")
+            surname = String(nameAndSurname.last ?? "")
+        }
+    }
+    
+    init(name: String, surname: String, yearOfBirth: Int, currentYear: Int) {
+        self.name = name
+        self.surname = surname
+        self.yearOfBirth = yearOfBirth
+        self.currentYear = currentYear
+    }
+
+}
+
+let secondPerson = SecondPerson(name: "Alex", surname: "Black", yearOfBirth: 1989, currentYear: 2022)
+secondPerson.age
+secondPerson.fullName
+
+secondPerson.fullName = "Bob Johnson"
+secondPerson.name
+secondPerson.surname
 
 
+// Ленивые свойства "lazy"
+
+class Importer {
+    let someData = "here we have some data"
+}
+
+class SomeDataProcess {
+    lazy var importer = Importer()
+    let smallDataProcess = "small data processing"
+    let averageDataProcess = "average data processing"
+}
+
+let process = SomeDataProcess()
+process.smallDataProcess
+process.averageDataProcess
+process
+process.importer.someData
+process
+
+
+//Наблюдатели свойств
+
+class BasketballPlayer {
+    
+    var ballCount = 0 {
+        willSet {
+            print("Go! Go! Go!")
+            print("You have thrown \(newValue) balls")
+        }
+        didSet {
+            print("Congratulations!")
+            print("Before this ball your score was \(oldValue) balls")
+        }
+    }
+    
+}
+
+let player = BasketballPlayer()
+player.ballCount = 3
