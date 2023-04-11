@@ -12,5 +12,6 @@
         <page name='Lesson 9 Enumeration'/>
         <page name='Lesson 10 Tuples'/>
         <page name='Lesson 11 Cast Types'/>
+        <page name='Lesson 12 Protocols'/>
     </pages>
 </playground>
