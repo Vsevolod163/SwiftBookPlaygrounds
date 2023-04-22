@@ -105,14 +105,14 @@ sortedEmployees.forEach { employee in
 }
 
 
-// Создание собственного протокола
+// MARK: - Создание собственного протокола
 
 // Сериализация
 
 protocol JSONSerializable {
     func toJSON() -> [String: Any]
 }
-
+// MARK: - Optional methods
 extension JSONSerializable {
     func doSomething() {
         print("do something")
@@ -136,3 +136,9 @@ let person = Person(name: "Tim", surname: "Cook", age: 62)
 let json = person.toJSON()
 
 print(json)
+
+
+
+// MARK: - Делигирование
+
+
